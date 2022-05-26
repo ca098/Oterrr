@@ -5,14 +5,13 @@ from decimal import *
 
 from prettytable import PrettyTable
 
-baseUrl = 'http://sc16ca.pythonanywhere.com/'
-# baseUrl = 'http://127.0.0.1:8000/'
+BASE_URL = 'http://127.0.0.1:8000/'
 
 session = requests.Session()
 
 
 def listModules():
-    url = baseUrl + 'modules/'
+    url = BASE_URL + 'modules/'
     response = session.get(url)
 
     jsonData = json.loads(response.text)
@@ -39,7 +38,7 @@ def listModules():
 
 
 def listProfessorRatings():
-    url = baseUrl + 'get_prof_ratings/'
+    url = BASE_URL + 'get_prof_ratings/'
     try:
         response = session.get(url)
         jsonData = json.loads(response.text)
@@ -63,7 +62,7 @@ def prof_module_rating(input):
     professor_id = tokens[1]
     module_code = tokens[2]
 
-    url = baseUrl + 'avg_module/{}/{}/'.format(professor_id, module_code)
+    url = BASE_URL + 'avg_module/{}/{}/'.format(professor_id, module_code)
     response = session.get(url)
 
     jsonData = json.loads(response.text)
@@ -94,8 +93,8 @@ def rate(input):
     semester = tokens[4]
     rating = tokens[5]
 
-    url = baseUrl + 'post_rating/{}/{}/{}/{}/{}/'.format(professor_id, module_code,
-                                                         year, semester, rating)
+    url = BASE_URL + 'post_rating/{}/{}/{}/{}/{}/'.format(professor_id, module_code,
+                                                          year, semester, rating)
 
     try:
         response = session.post(url)
@@ -110,7 +109,7 @@ def login():
     username = input("\nPlease input your username : ")
     password = input("Please input your password : ")
 
-    url = baseUrl + 'login/'
+    url = BASE_URL + 'login/'
 
     payload = {'username': username,
                'password': password}
@@ -125,7 +124,7 @@ def register():
     email = input("Please provide an email : ")
     password = input("Please provide a password : ")
 
-    url = baseUrl + 'register/'
+    url = BASE_URL + 'register/'
 
     payload = {'username': username,
                'email': email,
@@ -137,7 +136,7 @@ def register():
 
 
 def logout():
-    url = baseUrl + 'logout/'
+    url = BASE_URL + 'logout/'
 
     response = session.post(url)
 

@@ -35,13 +35,13 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('rating', models.IntegerField()),
-                ('module', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='RateProffessors.Module')),
-                ('professor', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='RateProffessors.Professor')),
+                ('module', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='rate_professors.Module')),
+                ('professor', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='rate_professors.Professor')),
             ],
         ),
         migrations.AddField(
             model_name='module',
             name='professor',
-            field=models.ManyToManyField(to='RateProffessors.Professor'),
+            field=models.ManyToManyField(to='rate_professors.Professor'),
         ),
     ]

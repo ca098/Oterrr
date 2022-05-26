@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class RateproffessorsConfig(AppConfig):
-    name = 'RateProffessors'
+    name = 'rate_professors'

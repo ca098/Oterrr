@@ -22,7 +22,7 @@ pip install django
 pip install djangorestframework
 
 
-domain = http://sc16ca.pythonanywhere.com/
+domain = http://127.0.0.1:8000
 
 username = ammar
 

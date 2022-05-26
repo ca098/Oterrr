@@ -1,4 +1,4 @@
-"""WebServices_cwk1 URL Configuration
+"""web_services URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-# from RateProffessors.views import handle_login_request, handle_logout_request
+# from rate_professors.views import handle_login_request, handle_logout_request
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('RateProffessors.urls')),
+    path('', include('rate_professors.urls')),
     # path('api/login/', login_request),
     # path('api/logout/', logout_request),
 ]

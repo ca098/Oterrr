@@ -12,7 +12,7 @@ from django.contrib.auth import authenticate, login, logout
 
 from json import loads, dumps
 
-from RateProffessors.serialisers import *
+from rate_professors.serialisers import *
 
 
 class ModuleViewSet(viewsets.ModelViewSet):
