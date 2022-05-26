@@ -4,7 +4,13 @@ A Python Django API to add modules, students and professors as well as allocatin
 
 # Set-up
 
-To run this project:
+## Prerequisites
+
+* [Python 3.7 +](https://www.python.org/downloads/release/python-3713/)
+
+
+
+To run this project
 
 ```
 sh install_modules.sh
